@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My ChatRoom</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <section class="chat__section">
@@ -13,22 +12,12 @@
             <img height="50" src="wassup.png" alt="brand icon">
             <h1>My ChatRoom</h1>
         </div>
-        <div class="message__area">
-            <div class="incoming message">
-                <h4>Shashi</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, facere.</p>
-            </div>
-             <div class="outgoing message">
-                <h4>Shashi</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, expedita. 
-                Labore libero explicabo assumenda laudantium consequatur iusto, illo facilis voluptate.</p>
-            </div>
-        </div>
+        <div class="message__area"></div>
         <div>
             <textarea id="textarea" cols="30" rows="1" placeholder="Write a message"></textarea>
         </div>
     </section>
-    <script src="client.js"></script>
     <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
 </body>
 </html>

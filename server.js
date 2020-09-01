@@ -10,7 +10,7 @@ http.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`);
 });
 
-app.use(express.static(__dirname + '/public/'))
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
@@ -19,7 +19,11 @@ app.get('/', (req, res) => {
 
 // configure socket.io
 io.on('connection', (socket)=> {
-    io.log('Connected...');
+    console.log('Connected...');
+    // broadcast msg to all server on recieving message from sender
+    socket.on('message', (msg) => {
+        socket.broadcast.emit('message', msg);
+    });
 })
 
 
